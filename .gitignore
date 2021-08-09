@@ -1,6 +1,7 @@
 /node_modules/
-*.json
+package-lock.json
+package.json
 /examples/
-/_static/*.scss
-/_static/.css.map
+/_static/styles.scss
+/_static/styles.css.map
 /_static/themes/
