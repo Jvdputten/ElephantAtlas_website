@@ -1,0 +1,6 @@
+/node_modules/
+*.json
+/examples/
+*.scss
+*.css.map
+/_static/themes/
