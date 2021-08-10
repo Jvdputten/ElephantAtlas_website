@@ -10739,7 +10739,7 @@ img {
 }
 
 .navbar-custom {
-  background-color: #212529;
+  background-color: black;
   font-size: xx-large;
 }
 .navbar-custom .navbar-nav .nav-link {
@@ -10830,6 +10830,7 @@ img {
   padding-bottom: 10rem;
   justify-items: center;
   width: 100vw;
+  display: block;
   /* Top Info */
   /* Controls */
   /* Progress */
@@ -10852,7 +10853,7 @@ img {
   margin: 0;
   background: linear-gradient(135deg, #f7ff07 0%, #ff9900 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bb71f3", endColorstr="#3d4d91", GradientType=1);
-  font-family: "Helvetica Neue", "Futura", "Trebuchet MS", Arial;
+  font-family: "Montserrat", sans-serif;
   -webkit-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -10867,7 +10868,7 @@ img {
   font-size: 34px;
   opacity: 0.9;
   font-weight: 300;
-  color: #fff;
+  color: #e9ecef;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
 }
 .music #timer {
@@ -10878,7 +10879,7 @@ img {
   font-size: 26px;
   opacity: 0.9;
   font-weight: 300;
-  color: #fff;
+  color: #e9ecef;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
 }
 .music #duration {
@@ -10889,7 +10890,7 @@ img {
   font-size: 26px;
   opacity: 0.5;
   font-weight: 300;
-  color: #fff;
+  color: #e9ecef;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
 }
 .music .controlsOuter {
@@ -10984,7 +10985,7 @@ img {
   width: 20%;
   left: 40%;
   display: none;
-  background-color: #fff;
+  background-color: #e9ecef;
   border-radius: 100%;
   -webkit-animation: sk-scaleout 1s infinite ease-in-out;
   animation: sk-scaleout 1s infinite ease-in-out;
@@ -11009,12 +11010,14 @@ img {
     opacity: 0;
   }
 }
+.music #playlist_wrapper {
+  display: block;
+}
 .music #playlist {
   width: 30em;
   padding: 0;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: block;
 }
 .music #list {
   display: -webkit-box;
@@ -11031,18 +11034,20 @@ img {
   -ms-flex-align: center;
   align-items: center;
 }
-.music .list-song {
+.music .list-song span {
   width: 100%;
   height: 120px;
   font-size: 3em;
   line-height: 120px;
   text-align: center;
   font-weight: bold;
-  color: #fff;
+  color: #e9ecef;
+  border-bottom: 0.5rem solid transparent;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
 }
-.music .list-song:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.music .list-song span:hover {
+  transition-duration: 0.5s;
+  border-bottom-color: #ffc107;
   cursor: pointer;
 }
 .music #volume {

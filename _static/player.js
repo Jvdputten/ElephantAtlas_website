@@ -24,13 +24,13 @@ var Player = function(playlist) {
   this.index = 0;
 
   // Display the title of the first track.
-  track.innerHTML = '1. ' + playlist[0].title;
+  track.innerHTML = "<span>" + '1. ' + playlist[0].title + "</span>";
 
   // Setup the playlist display.
   playlist.forEach(function(song) {
     var div = document.createElement('div');
     div.className = 'list-song';
-    div.innerHTML = song.title;
+    div.innerHTML = "<span>" + song.title  + "</span>";
     div.onclick = function() {
       player.skipTo(playlist.indexOf(song));
     };
@@ -102,7 +102,7 @@ Player.prototype = {
     sound.play();
 
     // Update the track display.
-    track.innerHTML = (index + 1) + '. ' + data.title;
+    track.innerHTML = "<span>" + (index + 1) + '. ' + data.title + "</span>";
 
     // Show the pause button.
     if (sound.state() === 'loaded') {
@@ -230,9 +230,9 @@ Player.prototype = {
     }
   },
 
-/*  /!**
+  /**
    * Toggle the playlist display on/off.
-   *!/
+   */
   togglePlaylist: function() {
     var self = this;
     var display = (playlist.style.display === 'block') ? 'none' : 'block';
@@ -241,7 +241,7 @@ Player.prototype = {
       playlist.style.display = display;
     }, (display === 'block') ? 0 : 500);
     playlist.className = (display === 'block') ? 'fadein' : 'fadeout';
-  },*/
+  },
 
 
 
@@ -274,7 +274,7 @@ Player.prototype = {
 // Setup our new audio player class and pass it the playlist.
 var player = new Player([
     {
-    title: 'Dantes Inferno',
+    title: "Dante's Inferno",
     file: 'Dantes_Inferno',
     howl: null
   },
@@ -318,9 +318,9 @@ waveform.addEventListener('click', function(event) {
 });*/
 
 
-playlist.addEventListener('click', function() {
+/*playlist.addEventListener('click', function() {
   player.togglePlaylist();
-});
+});*/
 
 
 volumeBtn.addEventListener('click', function() {

@@ -148,7 +148,7 @@
             <img src="icon/skip-end-fill.svg" alt="" id="nextBtn" class="btn filter-white">
             <img src="icon/skip-start-fill.svg" alt="" id="prevBtn" class="btn filter-white">
           </div>
-          <img src="icon/music-note-list.svg" alt="" id="playlistBtn" type="button" data-bs-toggle="collapse" data-bs-target="#playlist" class="btn filter-white">
+          <img src="icon/music-note-list.svg" alt="" id="playlistBtn" type="button"  class="btn filter-white" data-toggle="collapse" data-target="#playlist_wrapper" aria-expanded="true" aria-controls="playlist_wrapper">
           <img src="icon/volume-up.svg" alt="" id="volumeBtn" class="btn filter-white">
 
         </div>
@@ -168,8 +168,10 @@
       </div>
 
       <!-- Playlist -->
-      <div id="playlist" class="m-auto collapse">
-        <div id="list"></div>
+      <div id="playlist_wrapper" class="collapse">
+        <div id="playlist" class="mx-auto card-body">
+          <div id="list"></div>
+        </div>
       </div>
 
     </div>
