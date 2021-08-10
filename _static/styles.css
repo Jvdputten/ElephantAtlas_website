@@ -11010,20 +11010,13 @@ img {
   }
 }
 .music #playlist {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 30em;
+  padding: 0;
+  margin: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+  display: block;
 }
 .music #list {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11041,7 +11034,7 @@ img {
 .music .list-song {
   width: 100%;
   height: 120px;
-  font-size: 4em;
+  font-size: 3em;
   line-height: 120px;
   text-align: center;
   font-weight: bold;

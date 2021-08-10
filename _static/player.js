@@ -230,9 +230,9 @@ Player.prototype = {
     }
   },
 
-  /**
+/*  /!**
    * Toggle the playlist display on/off.
-   */
+   *!/
   togglePlaylist: function() {
     var self = this;
     var display = (playlist.style.display === 'block') ? 'none' : 'block';
@@ -241,7 +241,9 @@ Player.prototype = {
       playlist.style.display = display;
     }, (display === 'block') ? 0 : 500);
     playlist.className = (display === 'block') ? 'fadein' : 'fadeout';
-  },
+  },*/
+
+
 
   /**
    * Toggle the volume display on/off.
@@ -310,12 +312,17 @@ nextBtn.addEventListener('click', function() {
 waveform.addEventListener('click', function(event) {
   player.seek(event.clientX / window.innerWidth);
 });
-playlistBtn.addEventListener('click', function() {
+
+/*playlistBtn.addEventListener('click', function() {
   player.togglePlaylist();
-});
+});*/
+
+
 playlist.addEventListener('click', function() {
   player.togglePlaylist();
 });
+
+
 volumeBtn.addEventListener('click', function() {
   player.toggleVolume();
 });
