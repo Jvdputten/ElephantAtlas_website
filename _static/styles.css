@@ -10830,23 +10830,6 @@ img {
   /* Controls */
   /* Progress */
   /* Loading */
-  /*  @-webkit-keyframes sk-scaleout {
-      0% { -webkit-transform: scale(0) }
-      100% {
-        -webkit-transform: scale(1.0);
-        opacity: 0;
-      }
-    }
-    @keyframes sk-scaleout {
-      0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-      } 100% {
-        -webkit-transform: scale(1.0);
-        transform: scale(1.0);
-        opacity: 0;
-      }
-    }*/
   /* Plylist */
   /* Volume */
   /* Fade-In */
@@ -10994,7 +10977,6 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
-  z-index: 1;
 }
 .music #loading {
   position: absolute;
@@ -11005,6 +10987,26 @@ img {
   border-radius: 100%;
   -webkit-animation: sk-scaleout 1s infinite ease-in-out;
   animation: sk-scaleout 1s infinite ease-in-out;
+}
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
 }
 .music #playlist_wrapper {
   display: flex;
@@ -11030,19 +11032,20 @@ img {
   -ms-flex-align: center;
   align-items: center;
 }
-.music .list-song span {
+.music #list .list-song span {
   width: 100%;
-  height: 120px;
-  font-size: 3em;
-  line-height: 120px;
+  height: 100px;
+  font-size: 2.5em;
+  line-height: 100px;
   text-align: center;
   font-weight: bold;
   color: #e9ecef;
   border-bottom: 0.5rem solid transparent;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
 }
-.music .list-song span:hover {
+.music #list .list-song span:hover {
   transition-duration: 0.5s;
+  color: white;
   border-bottom-color: #ffc107;
   cursor: pointer;
 }
