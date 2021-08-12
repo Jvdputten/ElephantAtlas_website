@@ -31,6 +31,13 @@ body {
 }
 img{ filter: grayscale(100%)}
 
+.header{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  border-bottom: .5rem solid $theme-color;
+  margin-bottom: 1rem;
+}
+
 //navbar styling
 .navbar-custom {
   background-color: black;
@@ -124,6 +131,7 @@ img{ filter: grayscale(100%)}
 
   .members{
     background-color: $theme-bg-color-2;
+    border-radius: 5%;
   }
 
   .featurette-divider {
@@ -143,6 +151,7 @@ img{ filter: grayscale(100%)}
 // music styling
 @import "howler_styles";
 
+// upcoming shows styling
 
 
 
