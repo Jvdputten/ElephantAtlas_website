@@ -139,9 +139,9 @@
             <h3><span>MUSIC</span></h3>
           </div>
       </div>
-      <div class="audio-player-wrapper container-fluid">
+      <div class="audio-player-wrapper">
         <div class="row justify-content-center">
-          <div class="audio_player_wrapper d-flex col-sm-12 col-md-9 col-lg-6, col-xl-4">
+          <div class="audio_player_wrapper d-flex col-sm-12 col-md-9 col-lg-6, col-xl-4 col-xxl-3">
             <div class=" audio_player">
               <!-- Top Info -->
               <div id="title">
@@ -151,24 +151,29 @@
               </div>
 
               <!-- Controls -->
-              <div class="controlsOuter">
-                <div class="controlsInner m-auto">
-                  <div id="loading"></div>
-                  <img src="icon/play-fill.svg" alt="" id="playBtn" class="btn filter-white">
-                  <img src="icon/pause-fill.svg" alt="" id="pauseBtn" class="btn filter-white">
-                  <img src="icon/skip-end-fill.svg" alt="" id="nextBtn" class="btn filter-white">
-                  <img src="icon/skip-start-fill.svg" alt="" id="prevBtn" class="btn filter-white">
+              <div class='controls container-fluid'>
+                <div class="row justify-content-evenly">
+                  <div class="col-3 border-1 justify-content-center align-items-center">
+                     <img src="icon/skip-start-fill.svg" alt="" id="prevBtn" class="btn filter-white mx-auto d-block">
+                  </div>
+                  <div class="col-3 border-1 justify-content-center align-items-center">
+                    <div id="loading"></div>
+                    <img src="icon/play-fill.svg" alt="" id="playBtn" class="btn filter-white mx-auto">
+                    <img src="icon/pause-fill.svg" alt="" id="pauseBtn" class="btn filter-white mx-auto">
+                  </div>
+                  <div class="col-3 border-1 justify-content-center align-items-center">
+                    <img src="icon/skip-end-fill.svg" alt="" id="nextBtn" class="btn filter-white mx-auto d-block">
+                  </div>
+                  <div class="col-3 border-1 justify-content-center align-items-center">
+                     <img src="icon/volume-up.svg" alt="" id="volumeBtn" class="btn filter-white mx-auto d-block">
+                  </div>
                 </div>
-                <img src="icon/music-note-list.svg" alt="" id="playlistBtn" type="button"  class="btn filter-white d-none">
-                <img src="icon/volume-up.svg" alt="" id="volumeBtn" class="btn filter-white">
-
               </div>
 
               <!-- Progress -->
               <div id="waveform" class="my-auto"></div>
               <div id="bar"></div>
               <div id="progress"></div>
-
 
               <!-- Volume -->
               <div id="volume" class="fadeout">
@@ -181,7 +186,7 @@
         </div>
         <!-- Playlist -->
         <div class="row justify-content-center">
-          <div id="playlist_wrapper" class="col-sm-12 col-md-9 col-lg-6, col-xl-4">
+          <div id="playlist_wrapper" class="col-sm-12 col-md-9 col-lg-6, col-xl-4 col-xxl-3">
             <div id="playlist">
               <div id="list"></div>
             </div>

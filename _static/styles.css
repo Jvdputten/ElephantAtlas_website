@@ -10886,6 +10886,12 @@ img {
   color: #e9ecef;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
 }
+.music .controls {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 1%;
+}
 .music .controlsOuter {
   position: absolute;
   width: 100%;
@@ -10900,6 +10906,8 @@ img {
   position: absolute;
   cursor: pointer;
   opacity: 0.9;
+  width: 20%;
+  z-index: 2;
   bottom: 5%;
   -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.33));
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.33));
@@ -10913,36 +10921,13 @@ img {
   filter: brightness(0) invert(1);
 }
 .music #playBtn {
+  display: block;
   width: 20%;
-  left: 40%;
   z-index: 2;
 }
 .music #pauseBtn {
   width: 20%;
-  left: 40%;
   display: none;
-  z-index: 2;
-}
-.music #prevBtn {
-  width: 20%;
-  left: 6em;
-  z-index: 2;
-}
-.music #nextBtn {
-  width: 20%;
-  right: 6em;
-  z-index: 2;
-}
-.music #playlistBtn {
-  width: 17%;
-  left: 3%;
-  bottom: 12%;
-  z-index: 2;
-}
-.music #volumeBtn {
-  width: 17%;
-  right: 3%;
-  bottom: 12%;
   z-index: 2;
 }
 .music #waveform {
@@ -10981,7 +10966,6 @@ img {
 .music #loading {
   position: absolute;
   width: 20%;
-  left: 40%;
   display: none;
   background-color: #e9ecef;
   border-radius: 100%;
