@@ -10808,8 +10808,6 @@ img {
 }
 .band-info .members {
   background-color: #343a40;
-  padding: 2rem;
-  border-radius: 1rem;
 }
 .band-info .featurette-divider {
   margin: 1rem 0;
@@ -10828,13 +10826,27 @@ img {
 .music {
   padding: 0;
   padding-bottom: 10rem;
-  justify-items: center;
-  width: 100vw;
-  display: block;
   /* Top Info */
   /* Controls */
   /* Progress */
   /* Loading */
+  /*  @-webkit-keyframes sk-scaleout {
+      0% { -webkit-transform: scale(0) }
+      100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+    @keyframes sk-scaleout {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      } 100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+      }
+    }*/
   /* Plylist */
   /* Volume */
   /* Fade-In */
@@ -10847,10 +10859,8 @@ img {
 }
 .music .audio_player {
   position: relative;
-  width: 30em;
-  height: 300px;
-  padding: 0;
-  margin: 0;
+  width: 100%;
+  height: 350px;
   background: linear-gradient(135deg, #f7ff07 0%, #ff9900 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bb71f3", endColorstr="#3d4d91", GradientType=1);
   font-family: "Montserrat", sans-serif;
@@ -10865,7 +10875,7 @@ img {
   line-height: 34px;
   height: 34px;
   text-align: center;
-  font-size: 34px;
+  font-size: 26px;
   opacity: 0.9;
   font-weight: 300;
   color: #e9ecef;
@@ -10922,29 +10932,35 @@ img {
 .music #playBtn {
   width: 20%;
   left: 40%;
+  z-index: 2;
 }
 .music #pauseBtn {
   width: 20%;
   left: 40%;
   display: none;
+  z-index: 2;
 }
 .music #prevBtn {
   width: 20%;
   left: 6em;
+  z-index: 2;
 }
 .music #nextBtn {
   width: 20%;
   right: 6em;
+  z-index: 2;
 }
 .music #playlistBtn {
   width: 17%;
   left: 3%;
   bottom: 12%;
+  z-index: 2;
 }
 .music #volumeBtn {
   width: 17%;
   right: 3%;
   bottom: 12%;
+  z-index: 2;
 }
 .music #waveform {
   position: absolute;
@@ -10978,7 +10994,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
-  z-index: -1;
+  z-index: 1;
 }
 .music #loading {
   position: absolute;
@@ -10990,31 +11006,11 @@ img {
   -webkit-animation: sk-scaleout 1s infinite ease-in-out;
   animation: sk-scaleout 1s infinite ease-in-out;
 }
-@-webkit-keyframes sk-scaleout {
-  0% {
-    -webkit-transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    opacity: 0;
-  }
-}
-@keyframes sk-scaleout {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 0;
-  }
-}
 .music #playlist_wrapper {
-  display: block;
+  display: flex;
 }
 .music #playlist {
-  width: 30em;
+  width: 100%;
   padding: 0;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.5);

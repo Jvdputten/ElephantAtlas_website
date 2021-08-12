@@ -90,34 +90,40 @@
     <!-- About -->
     <div class='band-info'>
 
-      <div class="p-5 text-center container">
-        <h3><span>THE BAND</span></h3>
-        <p class="pt-4 px-2">
-          Elephant Atlas are a 2-piece Dutch Rock band from Veldhoven.
-          The band was only recently founded in 2020, however, the duo has been playing together for the last 15 years which is apparent from their synergy.
-          Their unique brand of entertainment fuses punchy Punk-Pop riffs with elements from blues, metal, country, and even hiphop.
-          Hailed as the 'best thing since sliced bread' by everyone and their grandma, Elephant Atlas is bound to put up a good show.
-        </p>
+      <div class="p-5 text-center container-flex">
+        <div class="row justify-content-center">
+          <div class="col-sm-12 col-md-9 col-lg-6, col-xl-4">
+
+            <h3><span>THE BAND</span></h3>
+            <p class="pt-4">
+              Elephant Atlas are a 2-piece Dutch Rock band from Veldhoven.
+              The band was only recently founded in 2020, however, the duo has been playing together for the last 15 years which is apparent from their synergy.
+              Their unique brand of entertainment fuses punchy Punk-Pop riffs with elements from blues, metal, country, and even hiphop.
+              Hailed as the 'best thing since sliced bread' by everyone and their grandma, Elephant Atlas is bound to put up a good show.
+            </p>
+
+          </div>
+        </div>
       </div>
-      <div class="container members shadow">
-        <div class="row align-items-center featurette">
-          <div class="col-md-5">
+      <div class="container-fluid members shadow py-5">
+        <div class="row justify-content-center align-items-center featurette">
+          <div class="col-md-5 col-xl-3">
             <h2 class="text-center">Joost</h2>
               <img src="img/joost.png" alt="" class="img-fluid rounded-circle band-member align-content-center">
           </div>
-          <div class="col-md-7 px-3">
+          <div class="col-md-7 col-xl-5">
             <h2 class="featurette-heading">Lead-vocals, guitarist, bassist (sort of), and the <span>least convincing rock star yet!</span></h2>
             <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
           </div>
         </div>
 
         <hr class="featurette-divider">
-        <div class="row align-items-center featurette">
-          <div class="col-md-5 order-md-2">
+        <div class="row justify-content-center align-items-center featurette">
+          <div class="col-md-5 col-xl-3 order-last">
             <h2 class="text-center">Jeroen</h2>
               <img src="img/jeroen.png" alt="" class="img-fluid rounded-circle band-member align-content-center">
           </div>
-          <div class="col-md-7 order-md-1 px3">
+          <div class="col-md-7 col-xl-5 order-first">
             <h2 class="featurette-heading">Drummer, backing vocals, and <span>always on time!</span></h2>
             <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
           </div>
@@ -127,53 +133,61 @@
 
 
     <!-- Music -->
-    <div class='music container'>
-      <div class="p-5 text-center">
-        <h3><span>MUSIC</span></h3>
-      </div>
-      <div class="audio_player container img-fluid m-auto ">
-          <!-- Top Info -->
-        <div id="title">
-          <span id="track"></span>
-          <div id="timer">0:00</div>
-          <div id="duration">0:00</div>
-        </div>
-
-        <!-- Controls -->
-        <div class="controlsOuter">
-          <div class="controlsInner m-auto">
-            <div id="loading"></div>
-            <img src="icon/play-fill.svg" alt="" id="playBtn" class="btn filter-white">
-            <img src="icon/pause-fill.svg" alt="" id="pauseBtn" class="btn filter-white">
-            <img src="icon/skip-end-fill.svg" alt="" id="nextBtn" class="btn filter-white">
-            <img src="icon/skip-start-fill.svg" alt="" id="prevBtn" class="btn filter-white">
+    <div class='music container-fluid text-center'>
+      <div class="row justify-content-center py-5">
+          <div class="col-sm-12 col-md-9 col-lg-6, col-xl-4">
+            <h3><span>MUSIC</span></h3>
           </div>
-          <img src="icon/music-note-list.svg" alt="" id="playlistBtn" type="button"  class="btn filter-white" data-toggle="collapse" data-target="#playlist_wrapper" aria-expanded="true" aria-controls="playlist_wrapper">
-          <img src="icon/volume-up.svg" alt="" id="volumeBtn" class="btn filter-white">
+      </div>
+      <div class="audio-player-wrapper container-fluid">
+        <div class="row justify-content-center">
+          <div class="audio_player_wrapper d-flex col-sm-12 col-md-9 col-lg-6, col-xl-4">
+            <div class=" audio_player">
+              <!-- Top Info -->
+              <div id="title">
+                <span id="track"></span>
+                <div id="timer">0:00</div>
+                <div id="duration">0:00</div>
+              </div>
 
+              <!-- Controls -->
+              <div class="controlsOuter">
+                <div class="controlsInner m-auto">
+                  <div id="loading"></div>
+                  <img src="icon/play-fill.svg" alt="" id="playBtn" class="btn filter-white">
+                  <img src="icon/pause-fill.svg" alt="" id="pauseBtn" class="btn filter-white">
+                  <img src="icon/skip-end-fill.svg" alt="" id="nextBtn" class="btn filter-white">
+                  <img src="icon/skip-start-fill.svg" alt="" id="prevBtn" class="btn filter-white">
+                </div>
+                <img src="icon/music-note-list.svg" alt="" id="playlistBtn" type="button"  class="btn filter-white" data-toggle="collapse" data-target="#playlist_wrapper" aria-expanded="true" aria-controls="playlist_wrapper">
+                <img src="icon/volume-up.svg" alt="" id="volumeBtn" class="btn filter-white">
+
+              </div>
+
+              <!-- Progress -->
+              <div id="waveform" class="my-auto"></div>
+              <div id="bar"></div>
+              <div id="progress"></div>
+
+
+              <!-- Volume -->
+              <div id="volume" class="fadeout">
+                <div id="barFull" class="bar"></div>
+                <div id="barEmpty" class="bar"></div>
+                <div id="sliderBtn"></div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Progress -->
-        <div id="waveform" class="my-auto"></div>
-        <div id="bar"></div>
-        <div id="progress"></div>
-
-
-        <!-- Volume -->
-        <div id="volume" class="fadeout">
-          <div id="barFull" class="bar"></div>
-          <div id="barEmpty" class="bar"></div>
-          <div id="sliderBtn"></div>
+        <!-- Playlist -->
+        <div class="row justify-content-center">
+          <div id="playlist_wrapper" class="collapse col-sm-12 col-md-9 col-lg-6, col-xl-4">
+            <div id="playlist">
+              <div id="list"></div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Playlist -->
-      <div id="playlist_wrapper" class="collapse">
-        <div id="playlist" class="mx-auto card-body">
-          <div id="list"></div>
-        </div>
-      </div>
-
     </div>
 
      <!-- Photos -->
