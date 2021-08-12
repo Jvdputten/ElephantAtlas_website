@@ -11223,44 +11223,11 @@ img {
   border-bottom: 0.5rem solid #ffc107;
   margin-bottom: 1rem;
 }
-.music .parallax-main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  perspective: 1px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.music .paralax-layer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.music .parallax-base {
-  transform: translateZ(0);
-}
-.music .parallax-back {
-  display: block;
-  width: 100%;
-  transform: translateZ(-1px);
+.music .audio_player_wrapper {
   background-image: url("../img/rock-band-square.png");
   background-repeat: no-repeat;
   background-size: cover;
-}
-.music .audio_player_wrapper {
-  position: relative;
-  /*    //display: block;
-      background-image: url("../img/rock-band-square.png");
-      background-repeat: no-repeat;
-      background-size:cover;
-      background-attachment: fixed;*/
-  height: 1000px;
+  background-attachment: fixed;
   margin-bottom: 5em;
 }
 .music .audio_player {
@@ -11410,7 +11377,6 @@ img {
 }
 .music #playlist_wrapper {
   display: flex;
-  z-index: 1;
 }
 .music #playlist {
   width: 100%;
