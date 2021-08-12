@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="_static/styles.css" rel="stylesheet">
+<!--    <link href="_static/howler_styles.css" rel="styleshoot">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&display=swap" rel="stylesheet">
@@ -90,7 +91,7 @@
     <!-- About -->
     <div class='band-info'>
 
-      <div class="p-5 text-center container-flex">
+      <div class="p-5 text-center container-fluid">
         <div class="row justify-content-center">
           <div class="col-sm-12 col-md-9 col-lg-6, col-xl-4">
 
@@ -105,7 +106,8 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid members shadow py-5">
+
+      <div class="container members shadow py-5">
         <div class="row justify-content-center align-items-center featurette">
           <div class="col-md-5 col-xl-3">
             <h2 class="text-center">Joost</h2>
@@ -119,11 +121,11 @@
 
         <hr class="featurette-divider">
         <div class="row justify-content-center align-items-center featurette">
-          <div class="col-md-5 col-xl-3 order-last">
+          <div class="col-md-5 col-xl-3 order-md-last order-sm-first">
             <h2 class="text-center">Jeroen</h2>
               <img src="img/jeroen.png" alt="" class="img-fluid rounded-circle band-member align-content-center">
           </div>
-          <div class="col-md-7 col-xl-5 order-first">
+          <div class="col-md-7 col-xl-5 order-md-first order-sm-last">
             <h2 class="featurette-heading">Drummer, backing vocals, and <span>always on time!</span></h2>
             <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
           </div>
@@ -137,7 +139,7 @@
       <div class="row justify-content-center py-5">
           <div class="col-sm-12 col-md-9 col-lg-6, col-xl-4">
             <h3><span>MUSIC</span></h3>
-            <p class="pt-4">
+            <p class="py-4">
               Intro about the music: Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
               a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
@@ -148,15 +150,22 @@
             </p>
           </div>
       </div>
-      <div class="audio-player-wrapper">
+
+
+      <div class="audio_player_wrapper container-fluid py-5">
+
+        <div>
+
+        </div>
+
         <div class="row justify-content-center">
-          <div class="audio_player_wrapper d-flex col-sm-12 col-md-9 col-lg-6, col-xl-4 col-xxl-3">
+          <div class="d-flex col-sm-12 col-md-9 col-lg-7 col-xl-5 col-xxl-4">
             <div class=" audio_player">
               <!-- Top Info -->
               <div id="title">
                 <span id="track"></span>
-                <div id="timer">0:00</div>
-                <div id="duration">0:00</div>
+                <div id="timer" class="timer-text">0:00</div>
+                <div id="duration" class="timer-text">0:00</div>
               </div>
 
               <!-- Controls -->
@@ -195,7 +204,7 @@
         </div>
         <!-- Playlist -->
         <div class="row justify-content-center">
-          <div id="playlist_wrapper" class="col-sm-12 col-md-9 col-lg-6, col-xl-4 col-xxl-3">
+          <div id="playlist_wrapper" class="col-sm-12 col-md-9 col-lg-7 col-xl-5 col-xxl-4">
             <div id="playlist">
               <div id="list"></div>
             </div>
@@ -204,8 +213,9 @@
       </div>
     </div>
 
-     <!-- Photos -->
 
+     <!-- Photos -->
+    <div style="height:800px;background-color:yellow;">This div is only here to enable scrolling (height = 800 pixels).</div>
       <!-- News -->
 
       <!-- Contact -->
@@ -217,6 +227,14 @@
     <script src="_static/howler.core.min.js"></script>
     <script src="_static/siriwave.js"></script>
     <script src="_static/player.js"></script>
+
+    <!-- parallax script -->
+    <script src="_static/rellax.min.js"></script>
+    <script>
+      var rellax = new Rellax('.rellax', {
+        center:true
+      });
+    </script>
 
   </body>
 </html>

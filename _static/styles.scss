@@ -1,6 +1,3 @@
-//$theme-color: #ffc107;
-//$theme-color: #45b054;
-//$theme-color: #5bc0de;
 @import "themes/yellow";
 @import "themes/dark";
 
@@ -23,7 +20,6 @@ $navbar-brand-margin-end: 3rem;
 $navbar-padding-y: 0;
 
 
-
 // Required
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -33,9 +29,9 @@ body {
   color: $theme-text-color;
   background-color: $theme-bg-color;
 }
-
 img{ filter: grayscale(100%)}
 
+//navbar styling
 .navbar-custom {
   background-color: black;
   font-size: xx-large;
@@ -70,6 +66,7 @@ img{ filter: grayscale(100%)}
   }
 }
 
+// carousel styling
 #headerCarousel{
   margin-top: $nav-link-height;
 
@@ -92,6 +89,7 @@ img{ filter: grayscale(100%)}
 
 }
 
+// Bio styling
 .band-info {
 
   h3 span{
@@ -142,304 +140,14 @@ img{ filter: grayscale(100%)}
 }
 }
 
-
-.music {
-  padding: 0;
-  padding-bottom: 10rem;
-
-  h3 span{
-    font-family: $theme-font;
-    font-weight: 900;
-    border-bottom: .5rem solid $theme-color;
-    margin-bottom: 1rem;
-  }
-
-  .audio_player {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    background: linear-gradient(135deg, $theme-color-2 0%, $theme-color-3 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bb71f3', endColorstr='#3d4d91', GradientType=1);
-    font-family: $theme-font;
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    }
-
-  /* Top Info */
-  #title {
-    position: absolute;
-    width: 100%;
-    top: 3%;
-    line-height: 34px;
-    height: 34px;
-    text-align: center;
-    font-size: 26px;
-    opacity: 0.9;
-    font-weight: 300;
-    color: $theme-text-color;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
-  }
-  #timer {
-    position: absolute;
-    top: 0;
-    left: 3%;
-    text-align: left;
-    font-size: 26px;
-    opacity: 0.9;
-    font-weight: 300;
-    color: $theme-text-color;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
-  }
-  #duration {
-    position: absolute;
-    top: 0;
-    right: 3%;
-    text-align: right;
-    font-size: 26px;
-    opacity: 0.5;
-    font-weight: 300;
-    color: $theme-text-color;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
-  }
-
-  .controls {
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    bottom: 1%;
-  }
-
-  /* Controls */
-  .controlsOuter {
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    bottom: 3%;
-  }
-  .controlsInner {
-    //position: absolute;
-    width: 60%;
-    height: 100%;
-  }
-  .btn {
-    position: absolute;
-    cursor: pointer;
-    opacity: 0.9;
-    width: 20%;
-    z-index: 2;
-    bottom: 5%;
-    -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.33));
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.33));
-    -webkit-user-select: none;
-    user-select: none;
-  }
-  .btn:hover {
-    opacity: 1;
-  }
-  .filter-white{
-      filter: brightness(0) invert(1);
-  }
-
- #playBtn {
-   display: block;
-   width: 20%;
-   //left: 40%;
-   z-index: 2;
-  }
-
-  #pauseBtn {
-    width: 20%;
-    //left: 40%;
-    display: none;
-    z-index: 2;
-  }
-
-
-  /* Progress */
-  #waveform {
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    top: 35%;
-    left: 0;
-    //top: 50%;
-    display: none;
-    cursor: pointer;
-    opacity: 0.8;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-  #waveform:hover {
-    opacity: 1;
-  }
-  #bar {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
-    opacity: 0.9;
-  }
-  #progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    //z-index: 1;
-  }
-
-  /* Loading */
-  #loading {
-    position: absolute;
-    width: 20%;
-    //left: 40%;
-    display: none;
-    background-color: $theme-text-color;
-    border-radius: 100%;
-    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-    animation: sk-scaleout 1.0s infinite ease-in-out;
-  }
-
-  @-webkit-keyframes sk-scaleout {
-    0% { -webkit-transform: scale(0) }
-    100% {
-      -webkit-transform: scale(1.0);
-      opacity: 0;
-    }
-  }
-  @keyframes sk-scaleout {
-    0% {
-      -webkit-transform: scale(0);
-      transform: scale(0);
-    } 100% {
-      -webkit-transform: scale(1.0);
-      transform: scale(1.0);
-      opacity: 0;
-    }
-  }
-
- #playlist_wrapper{
-    display: flex;
-  }
-
-  /* Plylist */
-  #playlist {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  #list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-
-    .list-song span{
-    width: 100%;
-    height: 100px;
-    font-size: 2.5em;
-    line-height: 100px;
-    text-align: center;
-    font-weight: bold;
-    color: $theme-text-color;
-    border-bottom: .5rem solid transparent;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
-    }
-    .list-song span:hover {
-      transition-duration: .5s;
-      color: white;
-      border-bottom-color: $theme-color;
-      cursor: pointer;
-    }
-  }
-
-  /* Volume */
-  #volume {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    touch-action: none;
-    -webkit-user-select: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    display: none;
-  }
-
-  .bar {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    margin: -5px auto;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
-  }
-  #barEmpty {
-    width: 90%;
-    opacity: 0.5;
-    box-shadow: none;
-    cursor: pointer;
-  }
-  #barFull {
-    width: 90%;
-  }
-
-  /* Fade-In */
-  .fadeout {
-    webkit-animation: fadeout 0.5s;
-    -ms-animation: fadeout 0.5s;
-    animation: fadeout 0.5s;
-  }
-  .fadein {
-    webkit-animation: fadein 0.5s;
-    -ms-animation: fadein 0.5s;
-    animation: fadein 0.5s;
-  }
-  @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-  @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-  @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-  @keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
-  }
-  @-webkit-keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
-  }
-  @-ms-keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
-  }
+// music styling
+@import "howler_styles";
 
 
 
-}
+
+
+
 
 
 

@@ -293,7 +293,13 @@ var player = new Player([
     title: 'Taboo',
     file: 'Taboo',
     howl: null
-  }
+  },
+
+  {
+    title: "Color Me Orange",
+    file: 'color_me_orange',
+    howl: null
+  },
 ]);
 
 // Bind our player controls.
