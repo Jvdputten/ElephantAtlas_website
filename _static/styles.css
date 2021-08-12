@@ -11224,11 +11224,27 @@ img {
   margin-bottom: 1rem;
 }
 .music .audio_player_wrapper {
-  background-image: url("../img/rock-band-square.png");
+  /*background-image: url("../img/rock-band-square.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-size:cover;
+  background-attachment: fixed;*/
+  position: relative;
   margin-bottom: 5em;
+}
+.music .background_image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.music .background_image img {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  z-index: -3;
 }
 .music .audio_player {
   position: relative;

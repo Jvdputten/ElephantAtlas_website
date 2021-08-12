@@ -8,20 +8,31 @@
     margin-bottom: 1rem;
   }
 
-  $parallax-perspective: 8px;
-
-  @function parallax-scale-factor($z-distance) {
-    @return ($parallax-perspective - $z-distance) / $parallax-perspective;
-  }
-
 
   .audio_player_wrapper{
     //display: block;
-    background-image: url("../img/rock-band-square.png");
+    /*background-image: url("../img/rock-band-square.png");
     background-repeat: no-repeat;
     background-size:cover;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
+    position: relative;
     margin-bottom: 5em;
+  }
+
+  .background_image{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      left:0;
+      top:0;
+      z-index: -3;
+    }
   }
 
   .audio_player {
