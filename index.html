@@ -153,65 +153,69 @@
 
 
       <div class="audio_player_wrapper container-fluid py-5">
+        <div class="parallax-main py-5">
+          <div class="paralax-layer parallax-back">
+            <div class="parallax-layer parallax-base">
+              <!-- Player -->
+              <div class="row justify-content-center">
+                <div class="d-flex col-sm-12 col-md-9 col-lg-7 col-xl-5 col-xxl-4">
+                  <div class=" audio_player">
+                    <!-- Top Info -->
+                    <div id="title">
+                      <span id="track"></span>
+                      <div id="timer" class="timer-text">0:00</div>
+                      <div id="duration" class="timer-text">0:00</div>
+                    </div>
 
-        <div>
+                    <!-- Controls -->
+                    <div class='controls container-fluid'>
+                      <div class="row justify-content-evenly">
+                        <div class="col-3 border-1 justify-content-center align-items-center">
+                           <img src="icon/skip-start-fill.svg" alt="" id="prevBtn" class="btn filter-white mx-auto d-block">
+                        </div>
+                        <div class="col-3 border-1 justify-content-center align-items-center">
+                          <div id="loading"></div>
+                          <img src="icon/play-fill.svg" alt="" id="playBtn" class="btn filter-white mx-auto">
+                          <img src="icon/pause-fill.svg" alt="" id="pauseBtn" class="btn filter-white mx-auto">
+                        </div>
+                        <div class="col-3 border-1 justify-content-center align-items-center">
+                          <img src="icon/skip-end-fill.svg" alt="" id="nextBtn" class="btn filter-white mx-auto d-block">
+                        </div>
+                        <div class="col-3 border-1 justify-content-center align-items-center">
+                           <img src="icon/volume-up.svg" alt="" id="volumeBtn" class="btn filter-white mx-auto d-block">
+                        </div>
+                      </div>
+                    </div>
 
-        </div>
+                    <!-- Progress -->
+                    <div id="waveform" class="my-auto"></div>
+                    <div id="bar"></div>
+                    <div id="progress"></div>
 
-        <div class="row justify-content-center">
-          <div class="d-flex col-sm-12 col-md-9 col-lg-7 col-xl-5 col-xxl-4">
-            <div class=" audio_player">
-              <!-- Top Info -->
-              <div id="title">
-                <span id="track"></span>
-                <div id="timer" class="timer-text">0:00</div>
-                <div id="duration" class="timer-text">0:00</div>
-              </div>
-
-              <!-- Controls -->
-              <div class='controls container-fluid'>
-                <div class="row justify-content-evenly">
-                  <div class="col-3 border-1 justify-content-center align-items-center">
-                     <img src="icon/skip-start-fill.svg" alt="" id="prevBtn" class="btn filter-white mx-auto d-block">
-                  </div>
-                  <div class="col-3 border-1 justify-content-center align-items-center">
-                    <div id="loading"></div>
-                    <img src="icon/play-fill.svg" alt="" id="playBtn" class="btn filter-white mx-auto">
-                    <img src="icon/pause-fill.svg" alt="" id="pauseBtn" class="btn filter-white mx-auto">
-                  </div>
-                  <div class="col-3 border-1 justify-content-center align-items-center">
-                    <img src="icon/skip-end-fill.svg" alt="" id="nextBtn" class="btn filter-white mx-auto d-block">
-                  </div>
-                  <div class="col-3 border-1 justify-content-center align-items-center">
-                     <img src="icon/volume-up.svg" alt="" id="volumeBtn" class="btn filter-white mx-auto d-block">
+                    <!-- Volume -->
+                    <div id="volume" class="fadeout">
+                      <div id="barFull" class="bar"></div>
+                      <div id="barEmpty" class="bar"></div>
+                      <div id="sliderBtn"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <!-- Progress -->
-              <div id="waveform" class="my-auto"></div>
-              <div id="bar"></div>
-              <div id="progress"></div>
-
-              <!-- Volume -->
-              <div id="volume" class="fadeout">
-                <div id="barFull" class="bar"></div>
-                <div id="barEmpty" class="bar"></div>
-                <div id="sliderBtn"></div>
+              <!-- Playlist -->
+              <div class="row justify-content-center">
+                <div id="playlist_wrapper" class="col-sm-12 col-md-9 col-lg-7 col-xl-5 col-xxl-4">
+                  <div id="playlist">
+                    <div id="list"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Playlist -->
-        <div class="row justify-content-center">
-          <div id="playlist_wrapper" class="col-sm-12 col-md-9 col-lg-7 col-xl-5 col-xxl-4">
-            <div id="playlist">
-              <div id="list"></div>
-            </div>
-          </div>
+
         </div>
       </div>
-    </div>
+
+
 
 
      <!-- Photos -->
@@ -233,7 +237,7 @@
     <script>
       var rellax = new Rellax('.rellax', {
         center:true
-      });
+              });
     </script>
 
   </body>
