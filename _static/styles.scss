@@ -29,9 +29,10 @@ body {
   color: $theme-text-color;
   background-color: $theme-bg-color;
 }
-img{ filter: grayscale(100%)}
+//img{ filter: grayscale(100%)}
 
 .header{
+  text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   border-bottom: .5rem solid $theme-color;
@@ -152,9 +153,10 @@ img{ filter: grayscale(100%)}
 @import "howler_styles";
 
 // upcoming shows styling
+@import "ticket_styles";
 
-
-
+// news styling
+@import 'news_style';
 
 
 
