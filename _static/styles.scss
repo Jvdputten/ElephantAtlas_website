@@ -29,7 +29,6 @@ body {
   color: $theme-text-color;
   background-color: $theme-bg-color;
 }
-//img{ filter: grayscale(100%)}
 
 .header{
   text-transform: uppercase;
@@ -147,6 +146,9 @@ body {
   letter-spacing: -.05rem;
   span {color: $theme-color;}
 }
+  .lead{
+    span {color: $theme-color;}
+  }
 }
 
 // music styling
@@ -161,7 +163,58 @@ body {
 // contact styling
 #contact-section{
   background-color: black;
+
+  $blueColor:rgba(33,150,243,1);
+
+  .flex-center {
+    width: 100%;
+
+    background: #000;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .icon-3d {
+    padding: 10px;
+    color: #fff;
+    &:hover {
+      -webkit-animation: icon3d 200ms infinite;
+            animation: icon3d 200ms infinite;
+    }
+  }
+
+  @keyframes icon3d {
+    0% {
+      text-shadow: 5px 4px $theme-color-2, -5px -6px $theme-color-3;
+    }
+    25% {
+      text-shadow: -5px -6px $theme-color-2, 5px 4px $theme-color-3;
+    }
+    50% {
+      text-shadow: 5px -4px $theme-color-2, -8px 4px $theme-color-3;
+    }
+    75% {
+      text-shadow: -8px -4px $theme-color-2, -5px -4px $theme-color-3;
+    }
+    100% {
+      text-shadow: -5px 0 $theme-color-2, 5px -4px $theme-color-3;
+    }
+  }
+
 }
+
+
 
 
 

@@ -268,6 +268,15 @@ Player.prototype = {
     var seconds = (secs - minutes * 60) || 0;
 
     return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+  },
+
+  get_percentage: function(xclick) {
+    let wavewidth = document.getElementById('audio_player').getBoundingClientRect().width
+    let screenwidth = window.innerWidth
+    let margin = (screenwidth - wavewidth)/2
+
+    return (xclick - margin) / wavewidth
+
   }
 };
 
@@ -316,7 +325,8 @@ nextBtn.addEventListener('click', function() {
   player.skip('next');
 });
 waveform.addEventListener('click', function(event) {
-  player.seek(event.clientX / window.innerWidth);
+  player.seek(player.get_percentage(event.clientX));
+  //player.seek(event.clientX / window.innerWidth);
 });
 
 /*playlistBtn.addEventListener('click', function() {

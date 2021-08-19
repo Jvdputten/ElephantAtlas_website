@@ -98,11 +98,6 @@
   font-size: 130%
 }
 
-.row:last-child .card:last-of-type .card-cont h3
-{
-  text-decoration: line-through
-}
-
 .card-cont > div
 {
   display: table-row
@@ -138,7 +133,6 @@
   text-decoration: none;
   width: 80px;
   height: 30px;
-  background-color: $theme-color;
   color: #fff;
   text-align: center;
   line-height: 30px;
@@ -163,14 +157,10 @@
   }
 }
 
-.row:last-child .card:first-child .card-cont a
-{
-  background-color: #037FDD
-}
-
-.row:last-child .card:last-child .card-cont a
-{
-  background-color: #F8504C
+.available{
+    a {
+    background-color: $theme-color;
+  }
 }
 
 @media screen and (max-width: 860px)

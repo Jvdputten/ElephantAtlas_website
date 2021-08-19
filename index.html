@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Elephant Atlas</title>
 
   </head>
@@ -32,7 +32,7 @@
                 <a class="nav-link" onClick="_scrollTo('about-section', -30)" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><span>About</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" onClick="_scrollTo('music-section', -30)" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><span>Music</span></a>
+                <a class="nav-link" onClick="_scrollTo('music-section', -50)" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><span>Music</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" onClick="_scrollTo('shows-section', -30)" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><span>Shows</span></a>
@@ -112,11 +112,15 @@
         <div class="row justify-content-center align-items-center featurette px-3">
           <div class="col-md-5 col-xl-3">
             <h2 class="text-center">Joost</h2>
-              <img src="img/joost.png" alt="" class="img-fluid rounded-circle band-member align-content-center">
+              <img src="img/joost_gray.jpg" alt="" class="img-fluid rounded-circle band-member align-content-center">
           </div>
           <div class="col-md-7 col-xl-5">
             <h2 class="featurette-heading">Lead-vocals, guitarist, bassist (sort of), and the <span>least convincing rock star yet!</span></h2>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            <p class="lead">Jack-of-all-trades, master of none, but oftentimes better than a master of one. <br>
+              Guitar <span>&#10003;</span>, vocals <span>&#10003;</span>, audio engineer <span>&#10003;</span>, bass <span>&#10003;</span>,
+              graphic design <span>&#10003;</span> (amazing website amirite), <br>
+              keys, harmonica, ukulele, banjo..... <span>fake it till you make it!</span>
+            </p>
           </div>
         </div>
 
@@ -124,7 +128,7 @@
         <div class="row justify-content-center align-items-center featurette px-3">
           <div class="col-md-5 col-xl-3 order-md-last order-sm-first">
             <h2 class="text-center">Jeroen</h2>
-              <img src="img/jeroen.png" alt="" class="img-fluid rounded-circle band-member align-content-center">
+              <img src="img/jeroen_gray.jpg" alt="" class="img-fluid rounded-circle band-member align-content-center">
           </div>
           <div class="col-md-7 col-xl-5 order-md-first order-sm-last">
             <h2 class="featurette-heading">Drummer, backing vocals, and <span>always on time!</span></h2>
@@ -163,7 +167,7 @@
               <!-- Player -->
               <div class="row justify-content-center">
                 <div class="d-flex col-sm-12 col-md-9 col-lg-7 col-xl-5 col-xxl-4">
-                  <div class=" audio_player">
+                  <div class="audio_player" id="audio_player">
                     <!-- Top Info -->
                     <div id="title">
                       <span id="track"></span>
@@ -224,49 +228,41 @@
         <div class="row justify-content-center">
           <div class="col-sm-12 col-md-9 col-lg-6, col-xl-5">
             <h3><span class="header">Upcoming shows</span></h3>
-            <p class="pt-4">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-              a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
-              from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-              Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-              written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-              "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-            </p>
           </div>
         </div>
       </div>
 
 
       <section class="container">
-        <div class="row">
-          <article class="card fl-left">
+
+        <div class="row justify-content-center">
+          <article class="card fl-left available">
             <section class="date">
-              <time datetime="23th feb">
-                <span>23</span><span>feb</span>
+              <time datetime="19th aug">
+                <span>19</span><span>aug</span>
               </time>
             </section>
             <section class="card-cont">
-              <small>dj khaled</small>
-              <h3>live in sydney</h3>
+              <small>Elephant Atlas</small>
+              <h3>live in your hometown</h3>
               <div class="even-date">
                <i class="fa fa-calendar"></i>
                <time>
-                 <span>wednesday 28 december 2014</span>
-                 <span>08:55pm to 12:00 am</span>
+                 <span>Thursday 19 august 2021</span>
+                 <span>20:00 to 00:00</span>
                </time>
               </div>
               <div class="even-info">
                 <i class="fa fa-map-marker"></i>
                 <p>
-                  nexen square for people australia, sydney
+                  Your venue here!!
                 </p>
               </div>
               <a href="#">tickets</a>
             </section>
           </article>
 
-          <article class="card fl-left">
+<!--          <article class="card fl-left">
             <section class="date">
               <time datetime="23th feb">
                 <span>23</span><span>feb</span>
@@ -290,10 +286,10 @@
               </div>
               <a href="#">tickets</a>
             </section>
-          </article>
+          </article>-->
         </div>
 
-        <div class="row">
+       <!-- <div class="row">
           <article class="card fl-left booked">
             <section class="date">
               <time datetime="23th feb">
@@ -345,7 +341,8 @@
               <a href="#">cancel</a>
             </section>
           </article>
-        </div>
+        </div>-->
+
       </section>
     </div>
 
@@ -359,11 +356,12 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row justify-content-center">
+
         <div class="col-lg-4 col-md-6 mt-4 pt-2">
           <div class="blog-post rounded">
             <div class="blog-img d-block overflow-hidden position-relative">
-              <img src="https://via.placeholder.com/350x280/FF7F50/000000" class="img-fluid rounded-top" alt="">
+              <img src="https://via.placeholder.com/350x280/ffc107/000000" class="img-fluid rounded-top" alt="">
               <div class="overlay rounded-top bg-dark">
               </div>
               <div class="post-meta">
@@ -371,14 +369,14 @@
               </div>
             </div>
             <div class="content p-3">
-              <small class="text-muted p float-right">19th Oct, 19</small>
-              <h4 class="mt-2"><a href="javascript:void(0)" class="text-muted title">Quick guide on business with friends.</a></h4>
-              <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+              <small class="text-muted p float-right">19th Aug, 21</small>
+              <h4 class="mt-2"><a href="javascript:void(0)" class="text-muted title">This is where we would put our news, if we had any!</a></h4>
+              <p class="text-muted mt-2">No news yet, come back later for updates.</p>
             </div>
           </div><!--end blog post-->
         </div><!--end col-->
 
-        <div class="col-lg-4 col-md-6 mt-4 pt-2">
+<!--        <div class="col-lg-4 col-md-6 mt-4 pt-2">
           <div class="blog-post rounded">
             <div class="blog-img d-block overflow-hidden position-relative">
               <img src="https://via.placeholder.com/350x280/6495ED/000000" class="img-fluid rounded-top" alt="">
@@ -392,8 +390,8 @@
               <h4 class="mt-2"><a href="javascript:void(0)" class="text-muted title">Become more money-minded</a></h4>
               <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
             </div>
-          </div><!--end blog post-->
-        </div><!--end col-->
+          </div>&lt;!&ndash;end blog post&ndash;&gt;
+        </div>&lt;!&ndash;end col&ndash;&gt;
 
         <div class="col-lg-4 col-md-6 mt-4 pt-2">
           <div class="blog-post rounded ">
@@ -408,36 +406,37 @@
             <small class="text-muted p float-right">19th Oct, 19</small>
             <h4 class="mt-2"><a href="javascript:void(0)" class="text-muted title">Quick guide on business with friends.</a></h4>
             <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
-          </div><!--end blog post-->
-        </div><!--end col-->
+          </div>&lt;!&ndash;end blog post&ndash;&gt;
+        </div>&lt;!&ndash;end col&ndash;&gt;-->
+
+
       </div><!--end row-->
     </div>
 
       <!-- Contact -->
     <div id="contact-section" class="container-fluid mt-5">
       <div class="p-5 container-fluid">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center text-center">
           <div class="col-sm-12 col-md-9 col-lg-6, col-xl-5">
             <h3><span class="header">Contact</span></h3>
           </div>
         </div>
-        <div class="row justify-content-center my-4">
+        <div class="row justify-content-center mt-4">
           <div class="col-sm-12 col-md-5 col-lg-4, col-xl-3 text-center">
             <div style="display: inline-block; text-align: left;">
               info@elephantatlas.com <br>
-              booking@elephantatlas.com <br>
             </div>
           </div>
+        </div>
+        <div class="row justify-content-center">
           <div class="col-sm-12 col-md-5 col-lg-4, col-xl-3 text-center">
-            <div style="display: inline-block; text-align: left;">
-              hoi hoi hoi <br>
-              hoi hoi hoi <br>
-              hoi hoi hoi <br>
-              hoi hoi hoi <br>
-              hoi hoi hoi <br>
-              hoi hoi hoi <br>
+            <div class="flex-center">
+              <a target="_blank" href="https://soundcloud.com/elephantatlas"><i class="fa fa-soundcloud fa-4x icon-3d"></i></a>
+              <a target="_blank" href="https://www.instagram.com/elephant.atlas/"><i class="fa fa-instagram fa-4x icon-3d"></i></a>
+              <i class="fa fa-facebook fa-4x icon-3d"></i>
+              <i class="fa fa-twitter fa-4x icon-3d"></i>
+              <i class="fa fa-youtube fa-4x icon-3d"></i>
             </div>
-
           </div>
         </div>
 
