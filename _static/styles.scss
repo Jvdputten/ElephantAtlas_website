@@ -164,17 +164,15 @@ body {
 #contact-section{
   background-color: black;
 
-  $blueColor:rgba(33,150,243,1);
-
   .flex-center {
     width: 100%;
 
-    background: #000;
+    //background: #000;
 
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    //display: -webkit-box;
+    //display: -webkit-flex;
+    //display: -ms-flexbox;
+    //display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
