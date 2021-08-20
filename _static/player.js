@@ -306,7 +306,7 @@ var player = new Player([
 
   {
     title: "Color Me Orange",
-    file: 'color_me_orange',
+    file: 'color_me_orange_fast',
     howl: null
   },
 ]);
