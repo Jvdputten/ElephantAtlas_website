@@ -10781,6 +10781,9 @@ body {
   padding-right: 1rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
+#headerCarousel .carousel-caption p {
+  font-size: small;
+}
 
 .band-info {
   /* Thin out the marketing headings */

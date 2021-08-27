@@ -82,14 +82,15 @@ body {
     bottom: initial;
     top: 50%;
 
-    h5 {
-
-    }
     span {
       border-bottom: .2rem solid $theme-color;
       padding-left: 1rem;
       padding-right: 1rem;
       background-color: rgba(0,0,0,0.5);
+    }
+
+    p {
+      font-size: small;
     }
   }
 
